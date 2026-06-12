@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JUDGE｜不動産プロフェッショナルセミナー Vol.01 大阪</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#181B39;
+  --navy-mid:#1C2040;
+  --gold:#C9A84C;
+  --gold-pale:#E8D498;
+  --cream:#F2EDE4;
+  --cream-dark:#E5DDD0;
+  --white:#FAFAF8;
+  --text-dim:rgba(242,237,228,.55);
+  --text-muted:rgba(242,237,228,.35);
+  --border-gold:rgba(201,168,76,.18);
+  --border-light:rgba(242,237,228,.08);
+  --red:#C0392B;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--navy);line-height:1.8;overflow-x:hidden}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--cream);border-bottom:1px solid var(--cream-dark)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:5px;color:var(--navy);font-weight:400}
+.nav-cta{background:var(--navy);color:var(--gold);font-size:11px;font-weight:500;padding:10px 24px;border:none;cursor:pointer;letter-spacing:2px;font-family:'Noto Sans JP',sans-serif;transition:all .25s}
+.nav-cta:hover{background:var(--gold);color:var(--navy)}
+
+/* ===== HERO ===== */
+.hero{background:var(--navy);min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:100px 48px 80px;position:relative;overflow:hidden}
+.hero::after{content:'JUDGE';position:absolute;right:-40px;bottom:-60px;font-family:'Cormorant Garamond',serif;font-size:260px;color:rgba(201,168,76,.04);font-weight:400;letter-spacing:-10px;pointer-events:none;line-height:1}
+.hero-inner{max-width:900px;margin:0 auto;width:100%;position:relative;z-index:1}
+.hero-series{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:6px;color:var(--gold);opacity:.7;margin-bottom:20px;font-style:italic}
+.hero-vol{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:4px;color:rgba(201,168,76,.5);margin-bottom:32px}
+.hero-rule{width:48px;height:1px;background:var(--gold);opacity:.4;margin-bottom:32px}
+.hero-title{font-family:'Noto Serif JP',serif;font-size:clamp(28px,4vw,52px);font-weight:400;color:var(--white);line-height:1.4;margin-bottom:12px;letter-spacing:.02em}
+.hero-title-sub{font-family:'Noto Serif JP',serif;font-size:clamp(16px,2vw,26px);font-weight:300;color:var(--gold-pale);line-height:1.5;margin-bottom:48px;letter-spacing:.05em}
+.hero-meta{display:flex;gap:48px;padding:28px 0;border-top:1px solid var(--border-gold);border-bottom:1px solid var(--border-gold);margin-bottom:48px;flex-wrap:wrap}
+.hero-meta-item{}
+.hero-meta-label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:4px;color:rgba(201,168,76,.6);margin-bottom:6px;font-style:italic}
+.hero-meta-value{font-size:15px;font-weight:500;color:var(--white)}
+.hero-meta-sub{font-size:11px;color:var(--text-dim);margin-top:2px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap}
+.hero-tag{font-size:10px;letter-spacing:2px;color:var(--text-dim);border:0.5px solid rgba(242,237,228,.2);padding:4px 12px}
+
+/* ===== SECTION COMMON ===== */
+.sec{padding:96px 48px}
+.sec-inner{max-width:860px;margin:0 auto}
+.sec-label{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:5px;color:var(--gold);margin-bottom:6px;font-style:italic;opacity:.8}
+.sec-num{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:rgba(24,27,57,.3);margin-bottom:4px}
+.sec-title{font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,32px);font-weight:400;color:var(--navy);line-height:1.4;margin-bottom:28px;letter-spacing:.03em}
+.sec-rule{width:32px;height:1px;background:var(--gold);margin-bottom:40px;opacity:.6}
+
+/* ===== CONCEPT ===== */
+.concept-sec{background:var(--cream)}
+.concept-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:680px){.concept-layout{grid-template-columns:1fr;gap:40px}}
+.concept-body{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:300;color:#2a2a2a;line-height:2.2}
+.concept-body p{margin-bottom:20px}
+.concept-accent{background:var(--navy);padding:28px 28px 28px 24px;border-left:2px solid var(--gold)}
+.concept-accent-label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:14px;font-style:italic;opacity:.8}
+.concept-accent-text{font-size:13px;color:rgba(242,237,228,.7);line-height:2}
+
+/* ===== GUEST ===== */
+.guest-sec{background:var(--navy-mid)}
+.guest-wrap{border:0.5px solid var(--border-gold);display:flex;gap:0;overflow:hidden}
+@media(max-width:680px){.guest-wrap{flex-direction:column}}
+.guest-photo-col{width:160px;flex-shrink:0;background:rgba(201,168,76,.06);display:flex;align-items:center;justify-content:center;border-right:0.5px solid var(--border-gold);min-height:200px}
+.guest-photo-placeholder{font-family:'Cormorant Garamond',serif;font-size:48px;color:rgba(201,168,76,.25);letter-spacing:-2px}
+.guest-info{padding:32px 36px;flex:1}
+.guest-role-label{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:4px;color:rgba(201,168,76,.6);margin-bottom:6px;font-style:italic}
+.guest-office{font-size:12px;color:var(--text-dim);margin-bottom:8px}
+.guest-name{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:400;color:var(--white);margin-bottom:4px;letter-spacing:.05em}
+.guest-title{font-size:12px;color:var(--text-dim);margin-bottom:20px}
+.guest-rule{width:24px;height:1px;background:var(--gold);margin-bottom:20px;opacity:.5}
+.guest-bio{font-size:13px;color:rgba(242,237,228,.6);line-height:2}
+
+/* ===== OUTLINE ===== */
+.outline-sec{background:var(--cream)}
+.outline-rows{}
+.outline-row{display:flex;gap:0;border-bottom:1px solid rgba(24,27,57,.08)}
+.outline-row:first-child{border-top:1px solid rgba(24,27,57,.08)}
+.outline-label-col{width:140px;flex-shrink:0;padding:24px 0;display:flex;align-items:flex-start;gap:10px}
+.outline-label-text{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:2px;color:var(--gold);font-style:italic;margin-top:2px}
+.outline-val-col{padding:24px 0 24px 32px;flex:1;border-left:1px solid rgba(24,27,57,.08)}
+.outline-val-main{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:400;color:var(--navy);margin-bottom:4px}
+.outline-val-sub{font-size:12px;color:#666;line-height:1.7}
+.outline-price-highlight{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--navy);font-weight:400;letter-spacing:1px}
+.outline-price-first{display:inline-block;margin-left:12px;font-size:12px;color:var(--gold);border:0.5px solid var(--gold);padding:2px 10px;letter-spacing:1px;vertical-align:middle}
+
+/* ===== TIMETABLE ===== */
+.timetable-sec{background:var(--navy)}
+.tl{max-width:560px}
+.tl-item{display:flex;gap:24px;padding-bottom:32px;position:relative}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:not(:last-child)::before{content:'';position:absolute;left:42px;top:28px;bottom:0;width:1px;background:var(--border-gold)}
+.tl-time{width:56px;flex-shrink:0;padding-top:4px}
+.tl-time span{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold);font-weight:400}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--border-gold);border:1px solid var(--gold);flex-shrink:0;margin-top:6px}
+.tl-dot.active{background:var(--gold);width:12px;height:12px;margin-top:5px}
+.tl-body{flex:1}
+.tl-title{font-size:14px;font-weight:500;color:var(--white);margin-bottom:3px}
+.tl-title.active{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:400;color:var(--gold-pale)}
+.tl-sub{font-size:12px;color:var(--text-dim);line-height:1.7}
+
+/* ===== FORM ===== */
+.form-sec{background:var(--cream-dark)}
+.form-box{max-width:600px;margin:0 auto;background:var(--white);border:0.5px solid rgba(24,27,57,.12);padding:48px 48px 40px}
+@media(max-width:640px){.form-box{padding:28px 20px}}
+.form-group{margin-bottom:28px}
+.form-label{font-size:12px;font-weight:500;color:var(--navy);letter-spacing:1px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.req{background:var(--red);color:#fff;font-size:9px;font-weight:500;padding:2px 8px;letter-spacing:1px}
+.form-input{width:100%;border:none;border-bottom:1px solid rgba(24,27,57,.2);background:transparent;font-size:14px;font-family:'Noto Sans JP',sans-serif;color:var(--navy);padding:10px 4px;outline:none;transition:border-color .2s}
+.form-input:focus{border-bottom-color:var(--gold)}
+.form-input::placeholder{color:rgba(24,27,57,.25);font-size:12px}
+select.form-input{cursor:pointer;-webkit-appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23181B39' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 4px center;padding-right:24px}
+textarea.form-input{border:1px solid rgba(24,27,57,.15);padding:12px;min-height:100px;resize:vertical;line-height:1.8;border-bottom:1px solid rgba(24,27,57,.15)}
+textarea.form-input:focus{border-color:var(--gold)}
+.form-submit{width:100%;background:var(--navy);color:var(--gold);font-size:13px;font-weight:500;padding:18px;border:none;cursor:pointer;letter-spacing:3px;font-family:'Noto Sans JP',sans-serif;margin-top:8px;transition:all .25s}
+.form-submit:hover{background:var(--gold);color:var(--navy)}
+.form-note{font-size:11px;color:#999;text-align:center;margin-top:16px;line-height:1.8}
+
+/* ===== FOOTER ===== */
+footer{background:var(--navy);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:0.5px solid var(--border-gold)}
+.footer-left{}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:5px;color:var(--gold);margin-bottom:6px;font-weight:400}
+.footer-tagline{font-size:10px;letter-spacing:2px;color:var(--text-muted)}
+.footer-right{font-size:11px;color:var(--text-muted);letter-spacing:1px}
+
+@media(max-width:640px){
+  nav{padding:0 20px}
+  .hero{padding:90px 20px 60px}
+  .hero::after{display:none}
+  .sec{padding:64px 20px}
+  .outline-label-col{width:90px}
+  footer{padding:32px 20px;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">JUDGE</div>
+  <button class="nav-cta" onclick="document.getElementById('entry').scrollIntoView({behavior:'smooth'})">セミナー申し込み</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-series">Real Estate Professional Seminar Series</div>
+    <div class="hero-vol">Vol. 01　—　弁護士回　大阪</div>
+    <div class="hero-rule"></div>
+    <h1 class="hero-title">不動産トラブルの<br>最前線と予防策</h1>
+    <div class="hero-title-sub">現役弁護士が語る、実務の現実。</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Date</div>
+        <div class="hero-meta-value">2025年11月　第1週</div>
+        <div class="hero-meta-sub">火・水・木のいずれか　18:00 受付開始</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Guest</div>
+        <div class="hero-meta-value">○○　○○ 先生</div>
+        <div class="hero-meta-sub">弁護士　○○法律事務所</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Venue</div>
+        <div class="hero-meta-value">大阪　梅田・本町周辺</div>
+        <div class="hero-meta-sub">会場確定後に更新</div>
+      </div>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag">不動産会社</span>
+      <span class="hero-tag">ハウスメーカー</span>
+      <span class="hero-tag">営業担当者</span>
+      <span class="hero-tag">店長・経営者</span>
+      <span class="hero-tag">軽食・名刺交換あり</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section class="sec concept-sec">
+  <div class="sec-inner">
+    <div class="sec-num">01 / Concept</div>
+    <div class="sec-label">企画趣旨</div>
+    <h2 class="sec-title">なぜ、このセミナーを<br>つくったのか。</h2>
+    <div class="sec-rule"></div>
+    <div class="concept-layout">
+      <div>
+        <div class="concept-body">
+          <p>不動産業界で働く方が、法的リスクを「知らないまま」案件を進めることは、担当者自身とお客様双方にとってのリスクになります。</p>
+          <p>このセミナーシリーズは、各分野の第一線で活躍する専門家の知見を、不動産業界の現場に届けることを目的としています。</p>
+          <p>Vol.01は弁護士回。軽食・名刺交換を含む2時間15分で、学びと交流を凝縮した場をつくります。</p>
+        </div>
+      </div>
+      <div>
+        <div class="concept-accent">
+          <div class="concept-accent-label">このセミナーで得られること</div>
+          <div class="concept-accent-text">現役弁護士が実際の案件から語る不動産トラブルの実態と予防策。契約・境界・相続・瑕疵——担当者が今日から使える法的知識。そして弁護士・士業・不動産業界の専門家との新しいご縁。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUEST -->
+<section class="sec guest-sec">
+  <div class="sec-inner">
+    <div class="sec-num" style="color:rgba(201,168,76,.3)">02 / Guest Speaker</div>
+    <div class="sec-label">ゲスト講師</div>
+    <h2 class="sec-title" style="color:var(--white)">プロフィール</h2>
+    <div class="sec-rule"></div>
+    <div class="guest-wrap">
+      <div class="guest-photo-col">
+        <div class="guest-photo-placeholder">⚖</div>
+      </div>
+      <div class="guest-info">
+        <div class="guest-role-label">Guest Speaker</div>
+        <div class="guest-office">○○法律事務所</div>
+        <div class="guest-name">○○　○○ 先生</div>
+        <div class="guest-title">弁護士（ゲスト確定後に更新）</div>
+        <div class="guest-rule"></div>
+        <div class="guest-bio">不動産取引・相続・契約トラブルを専門とする弁護士。年間多数の不動産関連案件を手がけ、予防法務の観点から不動産実務者へのアドバイスを行っている。「法律を知ってから売る・買う」をモットーに業界への教育活動にも積極的に取り組む。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTLINE -->
+<section class="sec outline-sec">
+  <div class="sec-inner">
+    <div class="sec-num">03 / Outline</div>
+    <div class="sec-label">開催概要</div>
+    <h2 class="sec-title">詳細</h2>
+    <div class="sec-rule"></div>
+    <div class="outline-rows">
+
+      <div class="outline-row">
+        <div class="outline-label-col">
+          <div class="outline-label-text">日時</div>
+        </div>
+        <div class="outline-val-col">
+          <div class="outline-val-main">2025年11月　第1週</div>
+          <div class="outline-val-sub">火・水・木のいずれか（日程確定後に更新）<br>18:00 受付開始　／　18:30 開始　／　20:45 完全退出</div>
+        </div>
+      </div>
+
+      <div class="outline-row">
+        <div class="outline-label-col">
+          <div class="outline-label-text">会場</div>
+        </div>
+        <div class="outline-val-col">
+          <div class="outline-val-main">大阪　梅田・本町周辺</div>
+          <div class="outline-val-sub">レンタルスペース（会場確定後に更新）</div>
+        </div>
+      </div>
+
+      <div class="outline-row">
+        <div class="outline-label-col">
+          <div class="outline-label-text">参加費</div>
+        </div>
+        <div class="outline-val-col">
+          <div class="outline-val-main">
+            <span class="outline-price-highlight">¥ 4,000</span>
+            <span style="font-size:12px;color:#666;margin-left:8px">軽食・ドリンク付き</span>
+          </div>
+          <div class="outline-val-sub" style="margin-top:6px">
+            <span class="outline-price-first">初参加 ¥ 2,000</span>
+            <span style="font-size:11px;color:#888;margin-left:10px">はじめての方は半額でご参加いただけます</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="outline-row">
+        <div class="outline-label-col">
+          <div class="outline-label-text">対象</div>
+        </div>
+        <div class="outline-val-col">
+          <div class="outline-val-main">不動産会社・ハウスメーカーの担当者・経営者</div>
+        </div>
+      </div>
+
+      <div class="outline-row">
+        <div class="outline-label-col">
+          <div class="outline-label-text">定員</div>
+        </div>
+        <div class="outline-val-col">
+          <div class="outline-val-main">定員なし</div>
+        </div>
+      </div>
+
+      <div class="outline-row">
+        <div class="outline-label-col">
+          <div class="outline-label-text">主催</div>
+        </div>
+        <div class="outline-val-col">
+          <div class="outline-val-main">一般社団法人JUDGE</div>
+          <div class="outline-val-sub">代表理事　有 真志（宅地建物取引士・FP2級・相続診断士）</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TIMETABLE -->
+<section class="sec timetable-sec">
+  <div class="sec-inner">
+    <div class="sec-num" style="color:rgba(201,168,76,.3)">04 / Timetable</div>
+    <div class="sec-label">当日の流れ</div>
+    <h2 class="sec-title" style="color:var(--white)">タイムテーブル</h2>
+    <div class="sec-rule"></div>
+    <div class="tl">
+
+      <div class="tl-item">
+        <div class="tl-time"><span style="opacity:.5">18:00</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-title" style="color:var(--text-dim)">受付開始</div>
+          <div class="tl-sub">LINE登録案内・参加費お支払い</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time"><span>18:30</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-title">JUDGEサービス・セミナー趣旨説明</div>
+          <div class="tl-sub">30分　有 真志によるJUDGEの紹介と本日のテーマ概要</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time"><span style="color:var(--gold-pale)">19:10</span></div>
+        <div class="tl-dot active"></div>
+        <div class="tl-body">
+          <div class="tl-title active">弁護士による講演</div>
+          <div class="tl-sub">40分　不動産トラブルの最前線と予防策　Q&A含む</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time"><span>19:50</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-title">名刺交換・軽食タイム</div>
+          <div class="tl-sub">45分　立食形式・次回セミナー予告・自由交流</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-time"><span style="opacity:.5">20:45</span></div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-title" style="color:var(--text-dim)">完全退出</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="sec form-sec" id="entry">
+  <div class="sec-inner">
+    <div class="sec-num" style="text-align:center">05 / Entry Form</div>
+    <div class="sec-label" style="text-align:center">参加申し込み</div>
+    <h2 class="sec-title" style="text-align:center">セミナーへの参加を<br>お申し込みください。</h2>
+    <div class="sec-rule" style="margin:0 auto 40px"></div>
+    <div class="form-box">
+
+      <div class="form-group">
+        <div class="form-label">会社名・屋号 <span class="req">必須</span></div>
+        <input class="form-input" type="text" placeholder="例：株式会社○○不動産">
+      </div>
+
+      <div class="form-group">
+        <div class="form-label">お名前 <span class="req">必須</span></div>
+        <input class="form-input" type="text" placeholder="例：山田 太郎">
+      </div>
+
+      <div class="form-group">
+        <div class="form-label">メールアドレス <span class="req">必須</span></div>
+        <input class="form-input" type="email" placeholder="例：yamada@example.com">
+      </div>
+
+      <div class="form-group">
+        <div class="form-label">お電話番号 <span class="req">必須</span></div>
+        <input class="form-input" type="tel" placeholder="例：06-XXXX-XXXX">
+      </div>
+
+      <div class="form-group">
+        <div class="form-label">初参加ですか？ <span class="req">必須</span></div>
+        <select class="form-input">
+          <option value="" disabled selected>選択してください</option>
+          <option>はい（初参加 ¥2,000）</option>
+          <option>いいえ（通常 ¥4,000）</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <div class="form-label">メッセージ・講師への質問（任意）</div>
+        <textarea class="form-input" placeholder="当日弁護士に質問したいことがあればご記入ください。"></textarea>
+      </div>
+
+      <button class="form-submit" onclick="alert('ありがとうございます。確認メールをお送りします。')">
+        申し込みを送信する
+      </button>
+      <p class="form-note">
+        送信後、確認メールをお送りします。<br>
+        お問い合わせは LINE @judge_kansai まで。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo">JUDGE</div>
+    <div class="footer-tagline">売らない・紹介料ゼロ・完全中立</div>
+  </div>
+  <div class="footer-right">© 一般社団法人JUDGE　All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
